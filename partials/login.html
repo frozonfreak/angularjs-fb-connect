@@ -1,14 +1,34 @@
 
 <div class="container">
+<div class="btn btn-info" ng-hide="user.authorized" ng-click="user.login()">Login with Facebook</div>
+  <div class="btn btn-info" ng-show="user.authorized" ng-click="user.logout()">Logout</div>
+  
+  <span>User logged in: {{user.authorized}}</span>
+  
+  <!-- Load Facebook SDK -->
+  <div id="fb-root"></div>
+     <script>
+       // Init the SDK upon load
+       window.fbAsyncInit = function() {
+         FB.init({
+           appId      : '149675501898913', // App ID
+           channelUrl : '//'+window.location.hostname+'/fbChannel.html', // Path to your Channel File
+           status     : true, // check login status
+           cookie     : true, // enable cookies to allow the server to access the session
+           xfbml      : false  // parse XFBML
+          });
 
-	<div id="fb-root"></div>
-	  
-	  <div class="ng-cloak" ng-show="user.connected">
-	  Hello {{user.first_name}}!
-	  </div>
-	  
-	  <div class="ng-cloak" ng-hide="user.connected">
-	    One moment please...
-	  </div> 
+         angular.bootstrap(document, ['smApp']);
+       };
+
+       // Load the SDK Asynchronously
+       (function(d){
+          var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement('script'); js.id = id; js.async = true;
+          js.src = "//connect.facebook.net/en_US/all.js";
+          ref.parentNode.insertBefore(js, ref);
+        }(document));
+    </script>
 	
 </div>

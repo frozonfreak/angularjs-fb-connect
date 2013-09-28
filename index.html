@@ -31,13 +31,21 @@
         <div data-ng-view=''>
         </div>
     </body>
-        <script src="http://connect.facebook.net/en_US/all.js"></script>
-        <script>
-            FB.init({
-              appId      : '149675501898913',     
-              status     : true,                              
-              xfbml      : true 
-            });
+        <script type="text/javascript">
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId: '149675501898913'
+                });
+            };
+
+            // Load the SDK Asynchronously
+            (function(d){
+                var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement('script'); js.id = id; js.async = true;
+                js.src = "//connect.facebook.net/en_US/all.js";
+                ref.parentNode.insertBefore(js, ref);
+            }(document));
         </script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -47,6 +55,7 @@
         <script src='//code.angularjs.org/1.2.0-rc.2/angular-route.min.js'></script>
         <script src='js/vendor/angular-cookies.min.js'></script>
         <script src='js/vendor/ng-grid-2.0.7.min.js'></script>
+        <script src='js/vendor/angular-resource.min.js'></script>
         <script src='js/vendor/date.js'></script>
         <script src='js/vendor/ui-bootstrap-tpls-0.5.0.min.js'></script>
         <script src='js/vendor/keypress.js'></script>
