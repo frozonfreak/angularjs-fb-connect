@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    <Sastha> -- <Developer> -- <sasthakl>
 
 # THANKS
 
-    <name>
+    <All>
 
 # TECHNOLOGY COLOPHON
 
