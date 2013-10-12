@@ -1,4 +1,4 @@
-var smApp = angular.module('smApp',['ui.date','ui.bootstrap','ui.keypress','ngRoute','ngCookies', 'ngResource', 'ngGrid']);
+var smApp = angular.module('smApp',['ui.bootstrap','ngRoute','ngCookies', 'ngResource']);
 
 //Routing
 smApp.config(function ($routeProvider) {
