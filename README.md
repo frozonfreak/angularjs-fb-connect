@@ -16,3 +16,7 @@ Built on top of [http://html5boilerplate.com](http://html5boilerplate.com)
 
 Still in Progress
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/frozonfreak/angularjs-fb-connect/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
